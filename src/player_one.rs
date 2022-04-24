@@ -16,7 +16,6 @@ pub fn setup(mut commands: Commands, windows: Res<Windows>) {
     let paddle_x = (-1.0 * (window.width() / 2.0)) + GAP_BETWEEN_PADDLE_AND_WALL;
     commands
         .spawn()
-        .insert(Paddle)
         .insert_bundle(SpriteBundle {
             transform: Transform {
                 translation: Vec3::new(paddle_x, 0.0, 1.0),
@@ -29,6 +28,6 @@ pub fn setup(mut commands: Commands, windows: Res<Windows>) {
             },
             ..default()
         })
-        .insert(PlayerOne)
-        .insert(Collider);
+        .insert(Paddle)
+        .insert(PlayerOne);
 }

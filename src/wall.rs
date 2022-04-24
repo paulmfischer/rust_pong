@@ -55,7 +55,7 @@ impl WallLocation {
 struct WallBundle {
     #[bundle]
     sprite_bundle: SpriteBundle,
-    collider: Collider,
+    wall: Wall,
 }
 
 impl WallBundle {
@@ -80,7 +80,7 @@ impl WallBundle {
                 },
                 ..default()
             },
-            collider: Collider,
+            wall: Wall,
         }
     }
 }

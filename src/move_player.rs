@@ -1,8 +1,7 @@
 use crate::prelude::*;
-use bevy::{math::const_vec3, prelude::*};
 
 // Defines the amount of time that should elapse between each physics step.
-pub const TIME_STEP: f32 = 1.0 / 40.0;
+pub const TIME_STEP: f32 = 1.0 / 60.0;
 
 const PADDLE_SPEED: f32 = 500.0;
 

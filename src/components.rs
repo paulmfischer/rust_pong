@@ -19,15 +19,7 @@ pub struct PlayerTwo;
 pub struct Paddle;
 
 #[derive(Component)]
-pub struct Collider;
-
-#[derive(Default)]
-pub struct CollisionEvent;
+pub struct Wall;
 
 #[derive(Component)]
 pub struct Goal;
-
-pub struct Scoreboard {
-    player_one: usize,
-    player_two: usize,
-}

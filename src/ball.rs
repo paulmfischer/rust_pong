@@ -8,10 +8,8 @@ const BALL_SPEED: f32 = 400.0;
 const INITIAL_BALL_DIRECTION: Vec2 = const_vec2!([0.5, -0.5]);
 const BALL_COLOR: Color = Color::rgb(1.0, 1.0, 1.0);
 
-pub fn setup(mut commands: Commands, windows: Res<Windows>) {
-    // let window = windows.get_primary().unwrap();
+pub fn setup(mut commands: Commands) {
     let ball_size = Vec3::new(30.0, 30.0, 0.0);
-    // let x_position = ball_size.to_array()[0] / 2.0 * -1.0;
     let y_position = ball_size.to_array()[1] / 2.0;
     let start_position = Vec3::new(0.0, y_position, 1.0);
     println!("ball start {}", start_position);
