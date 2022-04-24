@@ -58,11 +58,12 @@ fn main() {
         .run();
 }
 
-fn setup(mut commands: Commands, windows: Res<Windows>) {
-    let window = windows.get_primary().unwrap();
+fn setup(mut commands: Commands, mut windows: ResMut<Windows>) {
+    let window = windows.primary_mut();
     let height = window.height();
     commands.spawn_bundle(OrthographicCameraBundle::new_2d());
 
+    // display center line
     commands.spawn_bundle(SpriteBundle {
         transform: Transform {
             scale: Vec3::new(3.0, height, 0.0),
@@ -75,4 +76,6 @@ fn setup(mut commands: Commands, windows: Res<Windows>) {
         },
         ..default()
     });
+
+    window.set_title("Pong".to_string());
 }
